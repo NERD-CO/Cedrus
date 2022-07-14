@@ -4,7 +4,8 @@
 * The source of ```CedrusSetup.m```, ```getByte.m```, and ```setPulseDuration.m``` can be found in support documents on the [Cedrus website](https://www.cedrus.com/support/xid/matlab.htm).
 
 ### Requirements
-* ```getByte.m``` and ```setPulseDuration.m``` must be on the path for ```Cedrus_TTL.m``` to work
+* ```getByte.m``` and ```setPulseDuration.m``` must be on the path for ```Cedrus_TTL.m``` to work.
+* MATLAB must be opened before the Cedrus c-pod is connected to the computer from which the behavioral task runs. If the c-pod is connected before MATLAB is opened, it won't work.
 
 ### User guide
 #### 1. Assign distinct TTL markers for event types
@@ -18,7 +19,10 @@
             %DatapixxAOttl(); % TTL pulse marking screen flip that shows choice options
             write(device,sprintf("mh%c%c",70, 0), "char"); % TTL pulse marking screen flip that shows choice options
         end
-##### Where ```DatapixxAOttl();```, used to send TTLs with Datapixx, is replaced by ```write(device,sprintf("mh%c%c",70, 0), "char");```
-#### 3. Call ```Cedrus_TTL.m``` with outputs from within the main behavioral task function or script
+##### Where ```DatapixxAOttl();```, used to send TTLs with Datapixx and now obsolete, is replaced by ```write(device,sprintf("mh%c%c",70, 0), "char");```
+#### 3. Replace the number within the ```sprintf``` call with the event marker of your choosing for every distinct event.
+##### 
+* In the example above, ```70``` would be used to mark stimuli presentation, and would be changed to a different number for a different event type. 
+#### 4. Call ```Cedrus_TTL.m``` with outputs from within the main behavioral task function or script
 ##### 
 * *Example:* ```[ports, device] = Cedrus_TTL()```
