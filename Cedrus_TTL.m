@@ -1,3 +1,11 @@
+% ---Function 'Cedrus_TTL'---
+% 
+% For use with Cedrus c-pod to transmit hexidecmial TTL pulses
+%
+% Marielle L. Darwin | John A. Thompson
+% July 14 2022
+
+
 function [ports, device] = Cedrus_TTL()
 clear device
 device_found = 0;
