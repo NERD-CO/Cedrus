@@ -1,7 +1,7 @@
 ## Using Cedrus
 *Last update: July 14 2022*
 * ```Cedrus_TTL.m``` is a function that enables hexidecimal TTL to NLX transmission during a behavioral task.
-* This function is based off of the script ```CedrusSetup.m```. The script provides more detail about the code written in the function. 
+* This function is based off of the script ```CedrusSetup.m```. The script is not needed for any of these functions to work, but just provides more detail about the code written in the ```Cedrus_TTL.m``` function. 
 * The source of ```CedrusSetup.m```, ```getByte.m```, and ```setPulseDuration.m``` can be found in support documents on the [Cedrus website](https://www.cedrus.com/support/xid/matlab.htm).
 
 ### Requirements
