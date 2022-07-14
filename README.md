@@ -4,7 +4,7 @@
 * The source of ```CedrusSetup.m```, ```getByte.m```, and ```setPulseDuration.m``` can be found in support documents on the [Cedrus website](https://www.cedrus.com/support/xid/matlab.htm).
 
 ### Requirements
-* ```getByte.m``` and ```setPulseDuration.m``` must be on the path for ```Cedrus_TTL.m``` to work.
+* ```getByte.m``` and ```setPulseDuration.m``` must be on the MATLAB path for ```Cedrus_TTL.m``` to work.
 * MATLAB must be opened before the Cedrus c-pod is connected to the computer from which the behavioral task runs. If the c-pod is connected before MATLAB is opened, it won't work.
 
 ### User guide
