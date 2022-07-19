@@ -26,4 +26,4 @@
 * In the example above, ```70``` would be used to mark stimuli presentation, and would be changed to a different number for a different event type. 
 #### 4. Call ```Cedrus_TTL.m``` with outputs from within the main behavioral task function or script
 ##### 
-* *Example:* ```[ports, device] = Cedrus_TTL()```
+* *Example:* ```[~, device] = Cedrus_TTL()```
