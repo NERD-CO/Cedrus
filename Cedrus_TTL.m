@@ -1,10 +1,10 @@
 % ---Function 'Cedrus_TTL'---
 % 
 % For use with Cedrus c-pod to transmit hexidecmial TTL pulses
+% Requirements: 'get Byte.m' and 'setPulseDiration.m' functions on path 
 %
 % Marielle L. Darwin | John A. Thompson
-% July 14 2022
-
+% July 14 2022 | Last update: July 19 2022
 
 function [ports, device] = Cedrus_TTL()
 clear device
@@ -23,7 +23,7 @@ for p = 1:length(ports)
 end
 
 if device_found == 0
-    disp("No XID device found. Exiting.")
+    error("No XID device found. Exiting.")
     %return
 end
 
