@@ -7,6 +7,7 @@
 ### Requirements
 * ```getByte.m``` and ```setPulseDuration.m``` must be on the MATLAB path for ```Cedrus_TTL.m``` to work.
 * MATLAB must be opened before the Cedrus c-pod is connected to the computer from which the behavioral task runs. If the c-pod is connected before MATLAB is opened, it won't work.
+* Must use MATLAB R2020a or later version
 
 ### User guide
 #### 1. Assign distinct TTL markers for event types
