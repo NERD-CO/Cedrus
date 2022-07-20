@@ -25,6 +25,7 @@
 #### 3. Replace the number within the ```sprintf``` call with the event marker of your choosing for every distinct event.
 ##### 
 * In the example above, ```70``` would be used to mark stimuli presentation, and would be changed to a different number for a different event type. 
-#### 4. Call ```Cedrus_TTL.m``` with outputs from within the main behavioral task function or script
+#### 4. Call ```Cedrus_TTL.m``` with outputs from within the main behavioral task function or script. 
+*Note:* This function needs to be called before the first time the ```Screen``` function is called if using Psychtoolbox.
 ##### 
 * *Example:* ```[~, device] = Cedrus_TTL()```
