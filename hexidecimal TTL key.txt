@@ -14,8 +14,31 @@ TTL pulse marking start of the outcome epoch (line 778) = 70
 TTL pulse marking end of outcome epoch (line 801) = 71
 TTL pulse marking end of the study (line 825) = 51
 
+EMOTION TASKS:
+%% Note that the task event codes are shared between all emotion studies,
+%% but may mean slightly different things depending on the task (as noted).
+%% Each different task has a unique identifier as the first TTL.
+%% Task event codes:
+TTL pulse marking task start = 19
+TTL pulse marking word/image shown = 29
+TTL pulse marking first fixation cross shown (read, speak, execute, n-back) OR multiple choices shown (name3, name7) = 39
+TTL pulse marking speak/execute cue (read, speak, execute) OR response made (name3, name7, n-back) = 49
+TTL pulse marking second fixation cross shown (speak, execute) = 59
+TTL pulse marking audio recording start = 69
+TTL pulse marking audio recording stop = 79
+TTL pulse marking video recording start (first frame) = 89
+TTL pulse marking the 1000th video frame = 99
+%% Task identifier codes
+"Read" Task = 191
+"Speak" Task = 192
+"Execute" Task = 193
+"Name 3" Task = 194
+"Name 7" Task = 195
+"N-Back" Task = 196
+
 
 Replaced all %DatapixxAOttl();
 with:
 write(device,sprintf("mh%c%c", 20, 0), "char");
 where '20' changes based on TTL signature desired
+NOTE: Cedrus code numbers must be < 256 (cedrus only sends an 8-bit number)
